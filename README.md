@@ -14,6 +14,7 @@ You can find out about other keybindings by starting one (most likely with `<spa
 - `<space>e`: Open and close NvimTree.
 - `<space>Y`: Copy the whole file to the clipboard.
 - `<space>y`: Works like `y`, but copies to the clipboard.
+- `<C-\>`: Open a terminal inside Neovim, use the same keybinding to close it.
 
 ### Help
 
@@ -61,6 +62,12 @@ You can use `<space>l` to see diagnostics for the opened files, `<space>lt` to s
 - `<space>tr`: Compile and run all tests.
 - `<space>ta`: Add a test case.
 - `<space>te`: Edit test cases.
+
+### Repl
+
+- `<space>rp`: Open a Python repl (opens `bpython`).
+- `<space>rn`: Open a Node.js repl.
+- `<space>rh`: Opens Htop.
 
 ### Neogen
 
