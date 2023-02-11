@@ -2,6 +2,10 @@
 
 My awesome Neovim configuration
 
+## Installation
+
+To install this config just copy these files to `~/.config/nvim/` or create a symlink to this repo in the same directory.
+
 ## Keybindings
 
 You can find out about other keybindings by starting one (most likely with `<space>`). The main commands and categories are the following:
