@@ -4,7 +4,7 @@ My awesome Neovim configuration
 
 ## Installation
 
-To install this config just copy these files to `~/.config/nvim/` or create a symlink to this repo in the same directory.
+To install this config just copy these files to `~/.config/nvim/` or create a symlink to this repo in the same directory. You will need a [Nerd Font](https://github.com/ryanoasis/nerd-fonts) installed to see all the pretty icons.
 
 ## Keybindings
 
@@ -19,6 +19,22 @@ You can find out about other keybindings by starting one (most likely with `<spa
 ### Help
 
 Here you can find help for all commands, keymaps, options, etc. Just select what you want help with by pressing `<space>h`.
+
+### LSP
+
+You can use `<space>l` to see diagnostics for the opened files, `<space>lt` to see all the TODO, FIXME, NOTE, etc. in the current working directory.
+
+- `gl`: Show diagnostics for the current line.
+- `gd`: Go to the definition of the function / class / method / type under the cursor.
+- `gr`: Show references to this function / class / method / type.
+- `K`: Open documentation about function / class under cursor.
+- `KK`: Open and navigate documentation.
+- `<M-l>`: Accept Copilot's suggestions.
+- `<C-f>`: scroll documentation downwards.
+- `<C-b>`: scroll documentation upwards.
+- `<C-e>`: close autocomplete list.
+- `<C-n>`: next list item.
+- `<C-p>`: previous list item.
 
 ### Code
 
@@ -43,19 +59,6 @@ You can perform actions on files with `<space>f` and on buffer / history with `<
 - `<space>fr`: Search recently opened files by the filename.
 - `<space>sf`: Search text inside the files in the current working directory.
 - `<space>sb`: Search text inside the current buffer.
-
-### LSP
-
-You can use `<space>l` to see diagnostics for the opened files, `<space>lt` to see all the TODO, FIXME, NOTE, etc. in the current working directory.
-
-- `K`: Open documentation about function / class under cursor.
-- `KK`: Open and navigate documentation.
-- `<M-l>`: Accept Copilot's suggestions.
-- `<C-f>`: scroll documentation downwards.
-- `<C-b>`: scroll documentation upwards.
-- `<C-e>`: close autocomplete list.
-- `<C-n>`: next list item.
-- `<C-p>`: previous list item.
 
 ### Competitest
 
