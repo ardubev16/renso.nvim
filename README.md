@@ -6,6 +6,107 @@ My awesome Neovim configuration
 
 To install this config just copy these files to `~/.config/nvim/` or create a symlink to this repo in the same directory. You will need a [Nerd Font](https://github.com/ryanoasis/nerd-fonts) installed to see all the pretty icons.
 
+## Plugins
+
+This configuration uses [Lazy.nvim](https://github.com/folke/lazy.nvim) as a Plugin manager, therefore the full configuration for each plugin is in its file. The plugins are structured as follows:
+
+<details>
+<summary>Click here to see the plugin structure</summary>
+
+```bash
+plugins
+├── comments
+│   ├── Comment.lua
+│   ├── init.lua
+│   ├── neogen.lua
+│   └── todo-comments.lua
+├── completion
+│   ├── cmp.lua
+│   ├── copilot.lua
+│   ├── init.lua
+│   ├── nvim-autopairs.lua
+│   └── nvim-surround.lua
+├── editor
+│   ├── gitsigns.lua
+│   ├── init.lua
+│   ├── nvim-tree.lua
+│   ├── telescope.lua
+│   ├── toggleterm.lua
+│   ├── trouble.lua
+│   └── which-key.lua
+├── lsp
+│   ├── settings
+│   │   ├── jdtls.lua
+│   │   ├── jsonls.lua
+│   │   ├── lua_ls.lua
+│   │   └── rust_analyzer.lua
+│   ├── format.lua
+│   ├── init.lua
+│   ├── keymaps.lua
+│   ├── lspconfig.lua
+│   └── null-ls.lua
+├── ui
+│   ├── bufferline.lua
+│   ├── illuminate.lua
+│   ├── init.lua
+│   ├── lualine.lua
+│   ├── noice.lua
+│   ├── notify.lua
+│   └── theme.lua
+├── chatgpt.lua
+├── competitest.lua
+├── treesitter.lua
+└── ufo.lua
+```
+
+</details>
+
+<details>
+<summary>Click here to see the main plugins list</summary>
+
+- comments
+  - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+  - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+  - [neogen](https://github.com/danymat/neogen)
+- completion
+  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+  - [nvim-surround](https://github.com/kylechui/nvim-surround)
+  - [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+- lsp
+  - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+  - [mason.nvim](https://github.com/williamboman/mason.nvim)
+  - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [mason-null-ls.nvim](https://github.com/jay-babu/mason-null-ls.nvim)
+  - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
+  - [rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
+- editor
+  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+  - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+  - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+  - [which-key.nvim](https://github.com/folke/which-key.nvim)
+  - [trouble.nvim](https://github.com/folke/trouble.nvim)
+  - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+- ui
+  - [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
+  - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+  - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+  - [nvim-notify](https://github.com/rcarriga/nvim-notify)
+  - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+
+</details>
+
+## Config
+
+In the `user` folder are present 6 configuration files:
+
+- `autocommands.lua`: Here are present autocommands that run based on the filetype opened.
+- `keymaps.lua`: Basic keymaps for basic functionalities, independent from plugins.
+- `lazy_bootstrap.lua`: Copy-paste snippet for bootstrapping Lazy.nvim.
+- `util.lua`: Some utils from [LazyVim](https://github.com/LazyVim/LazyVim).
+- `options.lua`: Vim options.
+- `settings.lua`: Centralized place for some config such as lsp servers, linters & formatters, icons.
+
 ## Keybindings
 
 You can find out about other keybindings by starting one (most likely with `<space>`). The main commands and categories are the following:
