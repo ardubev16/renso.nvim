@@ -20,7 +20,7 @@ return {
         config = {},
     },
     {
-        'jayp0521/mason-null-ls.nvim',
+        'jay-babu/mason-null-ls.nvim',
         dependencies = {
             'williamboman/mason.nvim',
             'jose-elias-alvarez/null-ls.nvim',
