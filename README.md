@@ -23,6 +23,7 @@ plugins
 ├── completion
 │   ├── cmp.lua
 │   ├── copilot.lua
+│   ├── debugprint.lua
 │   ├── init.lua
 │   ├── nvim-autopairs.lua
 │   └── nvim-surround.lua
@@ -73,6 +74,7 @@ plugins
   - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
   - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
   - [nvim-surround](https://github.com/kylechui/nvim-surround)
+  - [debugprint.nvim](https://github.com/andrewferrier/debugprint.nvim)
   - [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
 - lsp
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -143,6 +145,9 @@ You can use `<space>l` to see diagnostics for the opened files, `<space>lt` to s
 
 - `<space>cg`: Open a ChatGPT prompt, you must set the API key as an environment variable, for more info see [the docs](https://github.com/jackMort/ChatGPT.nvim).
 - `<space>ca`: Perform Code Actions.
+- `<space>cp`: Add a debug print.
+- `<space>cv`: Add a debug print of the current variable.
+- `<space>cd`: Deletes all debug prints in the current buffer.
 
 ### Git
 
