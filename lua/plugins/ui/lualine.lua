@@ -2,20 +2,12 @@ local M = {
     'nvim-lualine/lualine.nvim',
     dependencies = {
         'nvim-tree/nvim-web-devicons',
-        {
-            'SmiteshP/nvim-navic',
-            config = {
-                icons = require('user.settings').icons.navic,
-                highlight = true,
-            },
-        },
     },
     event = 'VeryLazy',
 }
 
 function M.config()
     local symbols = require('user.settings').icons
-    local navic = require('nvim-navic')
 
     local diagnostics = {
         'diagnostics',
@@ -62,9 +54,6 @@ function M.config()
             lualine_z = {},
         },
         tabline = {},
-        -- winbar = {
-        --     lualine_c = { { navic.get_location, cond = navic.is_available } },
-        -- },
         extensions = { 'nvim-tree' },
     })
 end

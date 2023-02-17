@@ -1,4 +1,5 @@
 return {
+    require('plugins.ui.barbecue'),
     require('plugins.ui.bufferline'),
     require('plugins.ui.lualine'),
     require('plugins.ui.notify'),

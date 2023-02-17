@@ -5,7 +5,7 @@ local M = {
         'neovim/nvim-lspconfig',
         'tamago324/nlsp-settings.nvim',
         'hrsh7th/cmp-nvim-lsp',
-        'SmiteshP/nvim-navic',
+        -- 'SmiteshP/nvim-navic',
     },
     event = 'BufReadPre',
 }
@@ -19,9 +19,9 @@ function M.config()
 
             require('plugins.lsp.format').on_attach(client, buffer)
             require('plugins.lsp.keymaps').on_attach(client, buffer)
-            if client.server_capabilities.documentSymbolProvider then
-                require('nvim-navic').attach(client, buffer)
-            end
+            -- if client.server_capabilities.documentSymbolProvider then
+            --     require('nvim-navic').attach(client, buffer)
+            -- end
         end,
     })
 

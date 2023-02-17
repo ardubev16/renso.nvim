@@ -46,6 +46,7 @@ plugins
 │   ├── lspconfig.lua
 │   └── null-ls.lua
 ├── ui
+│   ├── barbecue.lua
 │   ├── bufferline.lua
 │   ├── illuminate.lua
 │   ├── init.lua
@@ -91,6 +92,7 @@ plugins
   - [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
   - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
   - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+  - [barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
   - [nvim-notify](https://github.com/rcarriga/nvim-notify)
   - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 
