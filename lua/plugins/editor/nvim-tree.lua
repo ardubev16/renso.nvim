@@ -3,29 +3,31 @@ local M = {
     dependencies = {
         'nvim-tree/nvim-web-devicons',
     },
-    -- TODO: add lazy loading ('VeryLazy' doesn't work the way I use it)
+    -- TODO: add lazy loading ('VeryLazy' doesn't work with auto-open)
 }
 
 function M.config()
-    -- Replaces auto_close
     local tree_cb = require('nvim-tree.config').nvim_tree_callback
-    vim.api.nvim_create_autocmd('BufEnter', {
-        nested = true,
-        callback = function()
-            if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match('NvimTree_') ~= nil then
-                vim.cmd('quit')
-            end
-        end,
-    })
+    local icons = require('user.settings').icons.diagnostics
+
+    local function open_nvim_tree(data)
+        -- buffer is a [No Name]
+        local no_name = data.file == '' and vim.bo[data.buf].buftype == ''
+
+        -- buffer is a directory
+        local directory = vim.fn.isdirectory(data.file) == 1
+
+        if not directory and not no_name then
+            return
+        end
+
+        -- open the tree
+        require('nvim-tree.api').tree.open()
+    end
+    vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
 
     require('nvim-tree').setup({
         disable_netrw = true,
-        open_on_setup = true,
-        ignore_ft_on_setup = {
-            'startify',
-            'dashboard',
-            'alpha',
-        },
         view = {
             mappings = {
                 custom_only = false,
@@ -49,10 +51,10 @@ function M.config()
         diagnostics = {
             enable = true,
             icons = {
-                error = '',
-                warning = '',
-                hint = '',
-                info = '',
+                error = icons.error,
+                warning = icons.warn,
+                hint = icons.hint,
+                info = icons.info,
             },
         },
         renderer = {

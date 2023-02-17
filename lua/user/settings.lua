@@ -9,7 +9,7 @@ local settings = {
             'jsonls',
             'pyright',
             'rust_analyzer',
-            'sumneko_lua',
+            'lua_ls',
             'tsserver',
             'jdtls',
         },
