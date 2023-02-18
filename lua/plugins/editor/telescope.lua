@@ -13,14 +13,14 @@ local M = {
 }
 
 M.keys = {
-    -- { '<leader>/', util.telescope('live_grep'), desc = 'Find in Files (Grep)' },
-    -- { '<leader><space>', util.telescope('find_files'), desc = 'Find Files (root dir)' },
     { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Buffers' },
     { '<leader>ff', util.telescope('find_files'), desc = 'Find Files (root dir)' },
     { '<leader>fF', util.telescope('find_files', { cwd = false }), desc = 'Find Files (cwd)' },
     { '<leader>fr', '<cmd>Telescope oldfiles<cr>', desc = 'Recent' },
-    { '<leader>gc', '<cmd>Telescope git_commits<CR>', desc = 'commits' },
-    { '<leader>gs', '<cmd>Telescope git_status<CR>', desc = 'status' },
+    { '<leader>ft', '<cmd>Telescope find_template type=insert<cr>', desc = 'Find template' },
+    { '<leader>fT', '<cmd>Telescope find_template<cr>', desc = 'Find all templates' },
+    { '<leader>gc', '<cmd>Telescope git_commits<cr>', desc = 'commits' },
+    { '<leader>gs', '<cmd>Telescope git_status<cr>', desc = 'status' },
     { '<leader>ha', '<cmd>Telescope autocommands<cr>', desc = 'Auto Commands' },
     { '<leader>hc', '<cmd>Telescope commands<cr>', desc = 'Commands' },
     { '<leader>hf', '<cmd>Telescope filetypes<cr>', desc = 'File Types' },
@@ -36,7 +36,6 @@ M.keys = {
     { '<leader>sF', util.telescope('live_grep', { cwd = false }), desc = 'Search Files (cwd)' },
     { '<leader>sm', '<cmd>Telescope marks<cr>', desc = 'Jump to Mark' },
     { '<leader>,', '<cmd>Telescope buffers show_all_buffers=true<cr>', desc = 'Switch Buffer' },
-    -- { '<leader>:', '<cmd>Telescope command_history<cr>', desc = 'Command History' },
     {
         '<leader>ss',
         util.telescope('lsp_document_symbols', {
@@ -97,6 +96,7 @@ function M.config()
     })
 
     telescope.load_extension('fzf')
+    telescope.load_extension('find_template')
 end
 
 return M

@@ -26,7 +26,8 @@ plugins
 │   ├── debugprint.lua
 │   ├── init.lua
 │   ├── nvim-autopairs.lua
-│   └── nvim-surround.lua
+│   ├── nvim-surround.lua
+│   └── template.lua
 ├── editor
 │   ├── gitsigns.lua
 │   ├── init.lua
@@ -75,6 +76,7 @@ plugins
   - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
   - [nvim-surround](https://github.com/kylechui/nvim-surround)
   - [debugprint.nvim](https://github.com/andrewferrier/debugprint.nvim)
+  - [template.nvim](https://github.com/glepnir/template.nvim)
   - [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
 - lsp
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -165,6 +167,7 @@ You can perform actions on files with `<space>f` and on buffer / history with `<
 
 - `<space>ff`: Search files in the current working directory by the filename.
 - `<space>fr`: Search recently opened files by the filename.
+- `<space>ft`: Search and insert a template.
 - `<space>sf`: Search text inside the files in the current working directory.
 - `<space>sb`: Search text inside the current buffer.
 
