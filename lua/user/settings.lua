@@ -27,9 +27,7 @@ local settings = {
             shellharden = {
                 extra_filetypes = { 'zsh' },
             },
-            stylua = {
-                extra_args = { '--indent-type', 'Spaces', '--indent-width', 4, '--quote-style', 'AutoPreferSingle' },
-            },
+            stylua = {},
             prettier = {
                 filetypes = { 'markdown' },
             },

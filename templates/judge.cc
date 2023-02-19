@@ -11,5 +11,5 @@ std::ofstream _out("output.txt");
 using namespace std;
 
 int main() {
-    {{ _cursor_ }}
+    {{_cursor_}}
 }
