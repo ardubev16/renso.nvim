@@ -58,6 +58,7 @@ plugins
 │   └── theme.lua
 ├── chatgpt.lua
 ├── competitest.lua
+├── deps_manager.lua
 ├── treesitter.lua
 └── ufo.lua
 ```
@@ -99,6 +100,13 @@ plugins
   - [barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
   - [nvim-notify](https://github.com/rcarriga/nvim-notify)
   - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+- misc
+  - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim)
+  - [competitest.nvim](https://github.com/xeluxee/competitest.nvim)
+  - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
+  - [crates.nvim](https://github.com/Saecki/crates.nvim)
+  - [package-info.nvim](https://github.com/vuki656/package-info.nvim)
 
 </details>
 
