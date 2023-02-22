@@ -3,9 +3,8 @@ local M = {
     dependencies = {
         'williamboman/mason.nvim',
         'neovim/nvim-lspconfig',
-        'tamago324/nlsp-settings.nvim',
+        'b0o/schemastore.nvim',
         'hrsh7th/cmp-nvim-lsp',
-        -- 'SmiteshP/nvim-navic',
     },
     event = 'BufReadPre',
 }
@@ -19,9 +18,6 @@ function M.config()
 
             require('plugins.lsp.format').on_attach(client, buffer)
             require('plugins.lsp.keymaps').on_attach(client, buffer)
-            -- if client.server_capabilities.documentSymbolProvider then
-            --     require('nvim-navic').attach(client, buffer)
-            -- end
         end,
     })
 
@@ -48,7 +44,14 @@ function M.config()
 
     -- lspconfig
     local servers = require('user.settings').lsp.servers
-    local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+    local capabilities = require('cmp_nvim_lsp').default_capabilities(
+        vim.lsp.protocol.make_client_capabilities()
+    )
+    -- for ufo-nvim
+    capabilities.textDocument.foldingRange = {
+        dynamicRegistration = false,
+        lineFoldingOnly = true,
+    }
 
     local mason_lspconfig = require('mason-lspconfig')
     mason_lspconfig.setup({
@@ -58,7 +61,8 @@ function M.config()
     mason_lspconfig.setup_handlers({
         function(server)
             local opts = {}
-            local has_opts, server_opts = pcall(require, 'plugins.lsp.settings.' .. server)
+            local has_opts, server_opts =
+                pcall(require, 'plugins.lsp.settings.' .. server)
             if has_opts then
                 opts = vim.tbl_deep_extend('force', opts, server_opts)
             end

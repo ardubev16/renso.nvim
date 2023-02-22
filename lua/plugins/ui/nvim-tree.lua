@@ -21,6 +21,11 @@ function M.config()
             return
         end
 
+        -- change to the directory
+        if directory then
+            vim.cmd.cd(data.file)
+        end
+
         -- open the tree
         require('nvim-tree.api').tree.open()
     end
@@ -75,7 +80,12 @@ function M.config()
 end
 
 function M.init()
-    vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })
+    vim.keymap.set(
+        'n',
+        '<leader>e',
+        '<cmd>NvimTreeToggle<CR>',
+        { desc = 'Toggle NvimTree' }
+    )
 end
 
 return M
