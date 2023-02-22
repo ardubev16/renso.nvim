@@ -44,9 +44,8 @@ function M.config()
 
     -- lspconfig
     local servers = require('user.settings').lsp.servers
-    local capabilities = require('cmp_nvim_lsp').default_capabilities(
-        vim.lsp.protocol.make_client_capabilities()
-    )
+    local capabilities =
+        require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
     -- for ufo-nvim
     capabilities.textDocument.foldingRange = {
         dynamicRegistration = false,
@@ -61,8 +60,7 @@ function M.config()
     mason_lspconfig.setup_handlers({
         function(server)
             local opts = {}
-            local has_opts, server_opts =
-                pcall(require, 'plugins.lsp.settings.' .. server)
+            local has_opts, server_opts = pcall(require, 'plugins.lsp.settings.' .. server)
             if has_opts then
                 opts = vim.tbl_deep_extend('force', opts, server_opts)
             end

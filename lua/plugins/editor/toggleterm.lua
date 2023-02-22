@@ -1,12 +1,13 @@
 local M = {
     'akinsho/toggleterm.nvim',
     event = 'BufReadPost',
-    keys = {
-        { '<leader>gt', '<cmd>lua _LAZYGIT_TOGGLE()<cr>', desc = 'Open LazyGit' },
-        { '<leader>rp', '<cmd>lua _PYTHON_TOGGLE()<cr>', desc = 'Open Python REPL' },
-        { '<leader>rn', '<cmd>lua _NODE_TOGGLE()<cr>', desc = 'Open Node REPL' },
-        { '<leader>rh', '<cmd>lua _HTOP_TOGGLE()<cr>', desc = 'Open htop' },
-    },
+}
+
+M.keys = {
+    { '<leader>gt', '<cmd>lua _LAZYGIT_TOGGLE()<cr>', desc = 'Open LazyGit' },
+    { '<leader>rp', '<cmd>lua _PYTHON_TOGGLE()<cr>', desc = 'Open Python REPL' },
+    { '<leader>rn', '<cmd>lua _NODE_TOGGLE()<cr>', desc = 'Open Node REPL' },
+    { '<leader>rh', '<cmd>lua _HTOP_TOGGLE()<cr>', desc = 'Open htop' },
 }
 
 function M.config()
@@ -14,7 +15,13 @@ function M.config()
         open_mapping = [[<c-\>]],
         direction = 'float',
         on_open = function(term)
-            vim.api.nvim_buf_set_keymap(term.bufnr, 't', '<c-\\>', '<cmd>close<cr>', { noremap = true, silent = true })
+            vim.api.nvim_buf_set_keymap(
+                term.bufnr,
+                't',
+                '<c-\\>',
+                '<cmd>close<cr>',
+                { noremap = true, silent = true }
+            )
         end,
         float_opts = {
             border = 'curved',

@@ -11,9 +11,21 @@ local M = {
 }
 
 M.keys = {
-    { '<leader>nf', '<cmd>lua require("neogen").generate({ type = "func" })<CR>', desc = 'Generate function docs' },
-    { '<leader>nc', '<cmd>lua require("neogen").generate({ type = "class" })<CR>', desc = 'Generate class docs' },
-    { '<leader>nt', '<cmd>lua require("neogen").generate({ type = "type" })<CR>', desc = 'Generate type docs' },
+    {
+        '<leader>nf',
+        '<cmd>lua require("neogen").generate({ type = "func" })<CR>',
+        desc = 'Generate function docs',
+    },
+    {
+        '<leader>nc',
+        '<cmd>lua require("neogen").generate({ type = "class" })<CR>',
+        desc = 'Generate class docs',
+    },
+    {
+        '<leader>nt',
+        '<cmd>lua require("neogen").generate({ type = "type" })<CR>',
+        desc = 'Generate type docs',
+    },
 }
 
 return M
