@@ -8,20 +8,6 @@ local M = {
 M.config = {
     create_keymaps = false,
     create_commands = false,
-    filetypes = {
-        cpp = {
-            left = 'std::cerr << "',
-            right = '" << std::endl;',
-            mid_var = '" << ',
-            right_var = ' << std::endl;',
-        },
-        rust = {
-            left = 'eprintln!("',
-            right = '");',
-            mid_var = '{}", ',
-            right_var = ');',
-        },
-    },
 }
 
 M.keys = {
