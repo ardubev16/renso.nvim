@@ -5,7 +5,7 @@ return {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope.nvim',
     },
-    config = {},
+    opts = {},
     keys = {
         { '<leader>cg', '<cmd>ChatGPT<CR>', desc = 'ChatGPT' },
     },

@@ -14,7 +14,7 @@ function M.init()
     vim.o.foldenable = true
 end
 
-M.config = {
+M.opts = {
     fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)
         local newVirtText = {}
         local suffix = ('  %d '):format(endLnum - lnum)

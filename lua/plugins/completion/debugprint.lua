@@ -5,7 +5,7 @@ local M = {
     },
 }
 
-M.config = {
+M.opts = {
     create_keymaps = false,
     create_commands = false,
 }

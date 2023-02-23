@@ -4,7 +4,7 @@ local M = {
         'nvim-treesitter/nvim-treesitter',
         'L3MON4D3/LuaSnip',
     },
-    config = {
+    opts = {
         enabled = true,
         snippet_engine = 'luasnip',
     },

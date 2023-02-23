@@ -1,7 +1,7 @@
 return {
     'glepnir/template.nvim',
     cmd = { 'Template', 'TemProject' },
-    config = {
+    opts = {
         temp_dir = vim.fn.stdpath('config') .. '/templates',
     },
 }

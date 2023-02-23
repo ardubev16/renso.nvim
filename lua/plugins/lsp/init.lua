@@ -17,7 +17,7 @@ return {
         'williamboman/mason.nvim',
         cmd = 'Mason',
         keys = { { '<leader>cm', '<cmd>Mason<cr>', desc = 'Mason' } },
-        config = {},
+        opts = {},
     },
     {
         'jay-babu/mason-null-ls.nvim',
@@ -26,7 +26,7 @@ return {
             'jose-elias-alvarez/null-ls.nvim',
         },
         event = 'VeryLazy',
-        config = {
+        opts = {
             automatic_installation = true,
         },
     },

@@ -9,11 +9,11 @@ return {
     {
         'norcalli/nvim-colorizer.lua',
         event = 'BufReadPre',
-        config = {},
+        opts = {},
     },
     {
         'lukas-reineke/indent-blankline.nvim',
         event = 'BufReadPre',
-        config = {},
+        opts = {},
     },
 }

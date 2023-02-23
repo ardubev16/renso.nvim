@@ -4,6 +4,6 @@ return {
         'nvim-treesitter/nvim-treesitter',
         'nvim-treesitter/nvim-treesitter-textobjects',
     },
-    config = {},
+    opts = {},
     -- TODO: add lazy loading
 }

@@ -13,7 +13,7 @@ M.keys = {
     { '<leader>tr', '<cmd>CompetiTestRun<CR>', desc = 'Run tests' },
 }
 
-M.config = {
+M.opts = {
     floating_border = 'single',
     floating_border_highlight = 'FloatBorder',
     editor_ui = {

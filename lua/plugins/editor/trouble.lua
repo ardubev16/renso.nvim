@@ -4,7 +4,7 @@ local M = {
         'nvim-tree/nvim-web-devicons',
     },
     cmd = { 'TroubleToggle', 'Trouble' },
-    config = { use_diagnostic_signs = true },
+    opts = { use_diagnostic_signs = true },
 }
 
 M.keys = {
