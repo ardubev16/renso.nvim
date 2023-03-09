@@ -16,4 +16,9 @@ return {
         event = 'BufReadPre',
         opts = {},
     },
+    {
+        'RaafatTurki/hex.nvim',
+        event = 'BufReadPre',
+        config = {},
+    },
 }
