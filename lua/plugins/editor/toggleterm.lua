@@ -38,7 +38,7 @@ function M.config()
         lazygit:toggle()
     end
 
-    local python = Terminal:new({ cmd = 'bpython', hidden = true })
+    local python = Terminal:new({ cmd = 'ipython', hidden = true })
     function _PYTHON_TOGGLE()
         python:toggle()
     end

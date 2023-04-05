@@ -187,7 +187,7 @@ You can perform actions on files with `<space>f` and on buffer / history with `<
 
 ### Repl
 
-- `<space>rp`: Open a Python repl (opens `bpython`).
+- `<space>rp`: Open a Python repl (opens `ipython`).
 - `<space>rn`: Open a Node.js repl.
 - `<space>rh`: Opens Htop.
 
