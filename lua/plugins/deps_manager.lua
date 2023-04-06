@@ -2,14 +2,14 @@ local package_info = {
     'vuki656/package-info.nvim',
     dependencies = { 'MunifTanjim/nui.nvim' },
     ft = { 'json' },
-    opts = {},
+    config = true,
 }
 
 local crates = {
     'saecki/crates.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     ft = { 'toml' },
-    opts = {},
+    config = true,
 }
 
 return {

@@ -5,7 +5,7 @@ local M = {
     },
     cmd = { 'TodoTrouble', 'TodoTelescope' },
     event = 'BufReadPost',
-    opts = {},
+    config = true,
 }
 
 -- stylua: ignore
