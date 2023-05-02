@@ -18,10 +18,7 @@ local settings = {
     },
     null_ls = {
         formatting = {
-            clang_format = {
-                -- FIXME: works only on save (had to also write it to ~/.clang-format)
-                extra_args = { '--style={IndentWidth: 4}' },
-            },
+            clang_format = {},
             eslint_d = {},
             tidy = {
                 extra_filetypes = { 'handlebars' },

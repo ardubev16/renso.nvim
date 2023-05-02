@@ -9,6 +9,10 @@ return {
     {
         'j-hui/fidget.nvim',
         event = 'VeryLazy',
-        config = true,
+        opts = {
+            text = {
+                spinner = 'dots',
+            },
+        },
     },
 }
