@@ -55,4 +55,15 @@ function M.telescope(builtin, opts)
     end
 end
 
+---@see https://github.com/RoryNesbitt/pvim
+function M.find_config()
+    local config_dir = os.getenv('PVIM')
+    if config_dir then
+        config_dir = config_dir .. '/config'
+    else
+        config_dir = vim.fn.stdpath('config')
+    end
+    return config_dir
+end
+
 return M

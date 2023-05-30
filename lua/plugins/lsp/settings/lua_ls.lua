@@ -7,7 +7,7 @@ return {
             workspace = {
                 library = {
                     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.stdpath('config') .. '/lua'] = true,
+                    [require('user.util').find_config() .. '/lua'] = true,
                 },
             },
         },
