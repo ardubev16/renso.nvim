@@ -49,11 +49,10 @@ class WeightedGraph {
         std::ofstream out("graph.dot");
         out << "strict graph {";
         for (size_t i = 0; i < this->N(); i++) {
-            out << i << "--{";
             for (DstNode node : this->adjList[i]) {
-                out << node.node << "[label=" << node.weight << "] ";
+                out << i << "--" << node.node << "[label=\"" << node.weight
+                    << "\"] ";
             }
-            out << '}';
         }
         out << '}';
     }
@@ -85,11 +84,10 @@ class WeightedOrientedGraph : public WeightedGraph {
         std::ofstream out("graph.dot");
         out << "strict digraph {";
         for (size_t i = 0; i < this->N(); i++) {
-            out << i << "->{";
             for (DstNode node : this->adjList[i]) {
-                out << node.node << "[label=" << node.weight << "] ";
+                out << i << "->" << node.node << "[label=\"" << node.weight
+                    << "\"] ";
             }
-            out << '}';
         }
         out << '}';
     }

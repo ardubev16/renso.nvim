@@ -5,6 +5,7 @@ from pwn import *
 
 # Setup #######################################################################
 context.binary = elf = ELF("./pwnme.exe", checksec=False)
+context.kernel = "amd64"
 
 rop = ROP(elf)
 
