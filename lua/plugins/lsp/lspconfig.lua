@@ -6,7 +6,6 @@ local M = {
         'b0o/schemastore.nvim',
         'hrsh7th/cmp-nvim-lsp',
     },
-    event = 'BufReadPre',
 }
 
 function M.config()
