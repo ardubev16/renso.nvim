@@ -63,7 +63,7 @@ local settings = {
     icons = {
         diagnostics = {
             error = ' ',
-            warn = ' ',
+            warn = ' ',
             hint = ' ',
             info = ' ',
         },
