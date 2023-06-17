@@ -4,7 +4,7 @@ My awesome Neovim configuration
 
 ## Installation
 
-To install this config just copy these files to `~/.config/nvim/` or create a symlink to this repo in the same directory. You will need a [Nerd Font](https://github.com/ryanoasis/nerd-fonts) installed to see all the pretty icons.
+To install this config just copy these files to `~/.config/nvim/` or create a symlink to this repo in the same directory. You will need a [Nerd Font](https://github.com/ryanoasis/nerd-fonts) installed to see all the pretty icons and Node for some plugins (e.g. Copilot).
 
 ## Plugins
 
@@ -31,7 +31,7 @@ plugins
 ├── editor
 │   ├── gitsigns.lua
 │   ├── init.lua
-│   ├── nvim-tree.lua
+│   ├── neo-tree.nvim
 │   ├── telescope.lua
 │   ├── toggleterm.lua
 │   ├── trouble.lua
@@ -99,7 +99,7 @@ plugins
   - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
   - [barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
   - [nvim-notify](https://github.com/rcarriga/nvim-notify)
-  - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+  - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - misc
   - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   - [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim)
@@ -126,7 +126,7 @@ In the `user` folder are present 6 configuration files:
 You can find out about other keybindings by starting one (most likely with `<space>`). The main commands and categories are the following:
 
 - `<space>x`: Close current buffer.
-- `<space>e`: Open and close NvimTree.
+- `<space>e`: Open and close Neotree.
 - `<space>Y`: Copy the whole file to the clipboard.
 - `<space>y`: Works like `y`, but copies to the clipboard.
 - `<C-\>`: Open a terminal inside Neovim, use the same keybinding to close it.
@@ -134,6 +134,11 @@ You can find out about other keybindings by starting one (most likely with `<spa
 ### Help
 
 Here you can find help for all commands, keymaps, options, etc. Just select what you want help with by pressing `<space>h`.
+
+### Neotree
+
+- `u`: Set the root directory to the parent of the current one.
+- `.`: Set the root directory to the one under the cursor.
 
 ### LSP
 
