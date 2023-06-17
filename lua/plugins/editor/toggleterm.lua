@@ -1,6 +1,6 @@
 local M = {
     'akinsho/toggleterm.nvim',
-    event = 'BufReadPost',
+    event = 'VeryLazy',
 }
 
 M.keys = {
