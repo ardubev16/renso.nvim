@@ -29,7 +29,7 @@ function M.config()
             theme = 'auto',
             component_separators = { left = '', right = '' },
             section_separators = { left = '', right = '' },
-            disabled_filetypes = { 'alpha', 'dashboard', 'NvimTree', 'Outline' },
+            disabled_filetypes = { 'alpha', 'dashboard', 'NvimTree', 'neo-tree', 'Outline' },
             always_divide_middle = true,
             globalstatus = false,
         },
