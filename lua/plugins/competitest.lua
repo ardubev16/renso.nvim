@@ -7,10 +7,9 @@ local M = {
 }
 
 M.keys = {
-    { '<leader>ta', '<cmd>CompetiTestAdd<CR>', desc = 'Add test' },
-    { '<leader>te', '<cmd>CompetiTestEdit<CR>', desc = 'Edit test' },
-    { '<leader>tc', '<cmd>CompetiTestReceive<CR>', desc = 'Start companion' },
-    { '<leader>tr', '<cmd>CompetiTestRun<CR>', desc = 'Run tests' },
+    { '<leader>ta', '<cmd>CompetiTest add_testcase<CR>', desc = 'Add test' },
+    { '<leader>te', '<cmd>CompetiTest edit_testcase<CR>', desc = 'Edit test' },
+    { '<leader>tr', '<cmd>CompetiTest run<CR>', desc = 'Run tests' },
 }
 
 M.opts = {

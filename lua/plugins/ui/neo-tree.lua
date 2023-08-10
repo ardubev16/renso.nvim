@@ -1,5 +1,6 @@
 local M = {
     'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-tree/nvim-web-devicons',
@@ -62,7 +63,7 @@ function M.config()
             {
                 event = 'file_opened',
                 handler = function()
-                    require('neo-tree').close_all()
+                    require('neo-tree.command').execute({ action = 'close' })
                 end,
             },
         },
@@ -85,7 +86,7 @@ function M.config()
 end
 
 function M.init()
-    vim.keymap.set('n', '<leader>e', '<cmd>NeoTreeFocusToggle<CR>', { desc = 'Toggle NeoTree' })
+    vim.keymap.set('n', '<leader>e', '<cmd>Neotree focus toggle<CR>', { desc = 'Toggle NeoTree' })
 end
 
 return M
