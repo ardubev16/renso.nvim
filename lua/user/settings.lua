@@ -11,6 +11,7 @@ local settings = {
             'lua_ls',
             'pyright',
             'rust_analyzer',
+            'tailwindcss',
             'taplo',
             'tsserver',
             'yamlls',
@@ -32,7 +33,7 @@ local settings = {
             },
             black = {},
             -- sqlformat = {},
-            sql_formatter = {},
+            -- sql_formatter = {},
         },
         diagnostics = {
             cppcheck = {},
