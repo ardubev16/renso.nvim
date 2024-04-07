@@ -1,6 +1,6 @@
 # Renso.nvim
 
-My awesome Neovim configuration
+My awesome Neovim configuration - **DEPRECATED** replaced by [renso.lazy](https://github.com/ardubev16/renso.lazy)
 
 ## Installation
 
